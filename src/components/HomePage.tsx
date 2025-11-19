@@ -137,7 +137,23 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               We partner with America's most reputable insurance companies to bring you the best coverage options.
             </p>
           </div>
-
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6 items-center">
+            <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center h-32">
+              <img
+                src="/mainphotos/MutualofOmaha.png"
+                alt="Mutual of Omaha"
+                className="max-h-20 w-auto object-contain"
+                loading="lazy"
+                onError={(e) => {
+                  const img = e.currentTarget as HTMLImageElement;
+                  if (!img.dataset.fallback) {
+                    img.src = '/mainphotos/mutualofomaha.png';
+                    img.dataset.fallback = 'true';
+                  }
+                }}
+              />
+            </div>
           <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6 items-center">
             <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center h-32">
               <img
@@ -358,7 +374,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <div className="bg-slate-900 rounded-3xl overflow-hidden">
                     <img
                       src="/mainphotos/image0 (3).jpeg"
-                      alt="Your professional headshot"
+                      alt="Johnathan Reyes"
                       className="w-full h-auto object-cover"
                       onError={(e) => {
                         const img = e.currentTarget as HTMLImageElement;
@@ -401,15 +417,19 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">NIPR #: 19616584</span>
+                  </li>                  
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-slate-700 font-medium">Certified with Symmetry Financial Group</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700 font-medium">15+ Years Industry Experience</span>
+                    <span className="text-slate-700 font-medium">5+ Years Industry Experience</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700 font-medium">Thousands of Families Protected</span>
+                    <span className="text-slate-700 font-medium">Hundreds of Families Protected</span>
                   </li>
                 </ul>
               </div>
@@ -440,7 +460,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
               <div className="flex items-center gap-4 mt-6">
                 <a
-                  href="https://www.linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/johnathan-reyes-395637394/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all shadow-md"
@@ -449,7 +469,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <Linkedin className="h-6 w-6" />
                 </a>
                 <a
-                  href="https://www.facebook.com/yourpage"
+                  href="https://www.facebook.com/profile.php?id=61581504694175"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-all shadow-md"
@@ -559,7 +579,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               </ul>
               <div className="flex items-center gap-3 mt-6">
                 <a
-                  href="https://www.linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/johnathan-reyes-395637394/e"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-10 h-10 bg-slate-800 text-slate-400 rounded-lg hover:bg-blue-600 hover:text-white transition-all"
@@ -568,7 +588,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://www.facebook.com/yourpage"
+                  href="https://www.facebook.com/profile.php?id=61581504694175"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-10 h-10 bg-slate-800 text-slate-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all"
