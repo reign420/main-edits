@@ -378,13 +378,14 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <div className="inline-block bg-teal-100 rounded-full px-4 py-2 mb-6">
                 <span className="text-teal-700 text-sm font-bold">Meet Your Agent</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
-                About Me
+              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-2">
+                Johnathan Reyes
               </h2>
+              <p className="text-xl text-teal-600 font-semibold mb-6">Founder, The Reyes Agency</p>
               <div className="w-24 h-1.5 bg-teal-500 rounded-full mb-8"></div>
 
               <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-                Hi, I'm with The Reyes Agency, and I'm dedicated to helping families like yours find the life insurance coverage they need to protect their loved ones and secure their financial future.
+                Hi, I'm Johnathan Reyes, and I'm dedicated to helping families like yours find the life insurance coverage they need to protect their loved ones and secure their financial future.
               </p>
 
               <p className="text-lg text-slate-700 mb-8 leading-relaxed">
@@ -414,16 +415,23 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  onClick={handleQuoteClick}
+                  className="inline-flex items-center justify-center bg-teal-500 text-white px-6 py-4 rounded-xl font-bold hover:bg-teal-600 transition-all shadow-lg group"
+                >
+                  Get Free Quote
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </button>
                 <a
                   href="tel:+13073091686"
-                  className="inline-flex items-center justify-center bg-teal-500 text-white px-6 py-4 rounded-xl font-bold hover:bg-teal-600 transition-all shadow-lg"
+                  className="inline-flex items-center justify-center bg-slate-900 text-white px-6 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg"
                 >
                   <Phone className="h-5 w-5 mr-2" />
                   Call Me
                 </a>
                 <a
                   href="mailto:info@thereyesagency.com"
-                  className="inline-flex items-center justify-center bg-slate-900 text-white px-6 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg"
+                  className="inline-flex items-center justify-center border-2 border-slate-300 text-slate-900 px-6 py-4 rounded-xl font-bold hover:bg-slate-100 transition-all"
                 >
                   <Mail className="h-5 w-5 mr-2" />
                   Email Me
