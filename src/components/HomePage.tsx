@@ -366,7 +366,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 <div className="bg-gradient-to-br from-teal-500 to-emerald-600 rounded-3xl p-1">
                   <div className="bg-slate-900 rounded-3xl overflow-hidden">
                     <img
-                      src="/mainphotos/image.jpeg"
+                      src="/mainphotos/image.png"
                       alt="Johnathan Reyes"
                       className="w-full h-auto object-cover"
                       onError={(e) => {
