@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="TRA monogram logo">
+  <defs>
+    <linearGradient id="monogramGradient" x1="0" x2="1">
+      <stop offset="0" stop-color="#0F172A"></stop>
+      <stop offset="1" stop-color="#1E293B"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Circle frame -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="url(#monogramGradient)" stroke-width="14"></circle>
+
+  <!-- TRA letters centered -->
+  <text x="50%" y="55%" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="140" fill="url(#monogramGradient)" text-anchor="middle" dominant-baseline="middle">TRA</text>
+</svg>
