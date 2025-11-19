@@ -141,22 +141,6 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6 items-center">
             <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center h-32">
               <img
-                src="/mainphotos/MutualofOmaha.png"
-                alt="Mutual of Omaha"
-                className="max-h-20 w-auto object-contain"
-                loading="lazy"
-                onError={(e) => {
-                  const img = e.currentTarget as HTMLImageElement;
-                  if (!img.dataset.fallback) {
-                    img.src = '/mainphotos/mutualofomaha.png';
-                    img.dataset.fallback = 'true';
-                  }
-                }}
-              />
-            </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6 items-center">
-            <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center h-32">
-              <img
                 src="/mainphotos/americanamicable.png"
                 alt="American Amicable"
                 className="max-h-20 w-auto object-contain"
@@ -170,6 +154,15 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 }}
               />
             </div>
+            <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center h-32">
+              <img
+                src="/mainphotos/MutualofOmaha.png"
+                alt="Mutual of Omaha"
+                className="max-h-20 w-auto object-contain"
+                loading="lazy"
+                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+              />
+            </div>            
             <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center h-32">
               <img
                 src="/mainphotos/americo.png"
