@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Users, Award, CheckCircle, Star, ArrowRight, Sparkles } from 'lucide-react';
+import { Shield, Users, Award, CheckCircle, Star, ArrowRight, Sparkles, User, Phone, Mail, Linkedin, Facebook, Quote } from 'lucide-react';
 
 interface HomePageProps {
   onNavigate: (section: 'home' | 'quote' | 'learn' | 'careers') => void;
@@ -258,6 +258,203 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
+      <section className="py-24 bg-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
+              What Our Clients Say
+            </h2>
+            <div className="w-24 h-1.5 bg-teal-500 mx-auto rounded-full mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Real stories from families we've helped protect
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-3xl shadow-lg border-2 border-slate-200 hover:shadow-2xl transition-all">
+              <div className="flex items-center mb-6">
+                <div className="flex">
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                </div>
+              </div>
+              <Quote className="h-10 w-10 text-teal-500 mb-4 opacity-50" />
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                Working with The Reyes Agency was seamless. They helped me find the perfect coverage for my family at a rate I could afford. Highly recommend!
+              </p>
+              <div className="flex items-center">
+                <div className="bg-teal-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <User className="h-6 w-6 text-teal-600" />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900">Sarah Johnson</p>
+                  <p className="text-sm text-slate-500">Cleveland, OH</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-lg border-2 border-slate-200 hover:shadow-2xl transition-all">
+              <div className="flex items-center mb-6">
+                <div className="flex">
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                </div>
+              </div>
+              <Quote className="h-10 w-10 text-teal-500 mb-4 opacity-50" />
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                Professional, knowledgeable, and genuinely cared about finding the best policy for us. The process was quick and easy. Thank you!
+              </p>
+              <div className="flex items-center">
+                <div className="bg-teal-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <User className="h-6 w-6 text-teal-600" />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900">Michael Chen</p>
+                  <p className="text-sm text-slate-500">Columbus, OH</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-lg border-2 border-slate-200 hover:shadow-2xl transition-all">
+              <div className="flex items-center mb-6">
+                <div className="flex">
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                  <Star className="h-5 w-5 text-amber-400 fill-amber-400" />
+                </div>
+              </div>
+              <Quote className="h-10 w-10 text-teal-500 mb-4 opacity-50" />
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                After shopping around, The Reyes Agency gave us the best rates and service. They explained everything clearly and made the whole process stress-free.
+              </p>
+              <div className="flex items-center">
+                <div className="bg-teal-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <User className="h-6 w-6 text-teal-600" />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900">Lisa Rodriguez</p>
+                  <p className="text-sm text-slate-500">Cincinnati, OH</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-teal-500 to-emerald-600 rounded-3xl p-1">
+                  <div className="bg-slate-900 rounded-3xl overflow-hidden">
+                    <img
+                      src="/mainphotos/image0 (3).jpeg"
+                      alt="Your professional headshot"
+                      className="w-full h-auto object-cover"
+                      onError={(e) => {
+                        const img = e.currentTarget as HTMLImageElement;
+                        img.style.display = 'none';
+                        const parent = img.parentElement?.parentElement;
+                        if (parent) {
+                          parent.innerHTML = '<div class="bg-gradient-to-br from-teal-500 to-emerald-600 rounded-3xl w-full aspect-square flex items-center justify-center"><div class="text-white"><User class="h-32 w-32 mx-auto mb-4 opacity-50" /><p class="text-center text-xl font-bold">Your Photo Here</p></div></div>';
+                        }
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="inline-block bg-teal-100 rounded-full px-4 py-2 mb-6">
+                <span className="text-teal-700 text-sm font-bold">Meet Your Agent</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
+                About Me
+              </h2>
+              <div className="w-24 h-1.5 bg-teal-500 rounded-full mb-8"></div>
+
+              <p className="text-lg text-slate-700 mb-6 leading-relaxed">
+                Hi, I'm with The Reyes Agency, and I'm dedicated to helping families like yours find the life insurance coverage they need to protect their loved ones and secure their financial future.
+              </p>
+
+              <p className="text-lg text-slate-700 mb-8 leading-relaxed">
+                With years of experience in the insurance industry, I understand that every family's needs are unique. That's why I take the time to listen, understand your situation, and find the best coverage options that fit your budget and goals.
+              </p>
+
+              <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 mb-8 border-2 border-teal-100">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Credentials & Certifications</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">Licensed Life & Health Insurance Agent</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">Certified with Symmetry Financial Group</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">15+ Years Industry Experience</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-teal-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">Thousands of Families Protected</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="tel:+13073091686"
+                  className="inline-flex items-center justify-center bg-teal-500 text-white px-6 py-4 rounded-xl font-bold hover:bg-teal-600 transition-all shadow-lg"
+                >
+                  <Phone className="h-5 w-5 mr-2" />
+                  Call Me
+                </a>
+                <a
+                  href="mailto:info@thereyesagency.com"
+                  className="inline-flex items-center justify-center bg-slate-900 text-white px-6 py-4 rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg"
+                >
+                  <Mail className="h-5 w-5 mr-2" />
+                  Email Me
+                </a>
+              </div>
+
+              <div className="flex items-center gap-4 mt-6">
+                <a
+                  href="https://www.linkedin.com/in/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all shadow-md"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a
+                  href="https://www.facebook.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-all shadow-md"
+                  aria-label="Facebook Page"
+                >
+                  <Facebook className="h-6 w-6" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="relative py-28 text-white bg-gradient-to-r from-slate-900 via-slate-800 to-teal-900 overflow-hidden">
         <img
           src="/mainphotos/cottonbro.jpg"
@@ -338,10 +535,40 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             <div>
               <h4 className="text-lg font-bold mb-6">Contact</h4>
               <ul className="space-y-3 text-slate-400">
-                <li className="font-medium">Phone: (307) 309-1686</li>
-                <li className="font-medium">Email: info@thereyesagency.com</li>
+                <li>
+                  <a href="tel:+13073091686" className="font-medium hover:text-teal-400 transition-colors flex items-center">
+                    <Phone className="h-4 w-4 mr-2" />
+                    (307) 309-1686
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@thereyesagency.com" className="font-medium hover:text-teal-400 transition-colors flex items-center">
+                    <Mail className="h-4 w-4 mr-2" />
+                    info@thereyesagency.com
+                  </a>
+                </li>
                 <li className="font-medium">Sheffield Lake, OH 44054</li>
               </ul>
+              <div className="flex items-center gap-3 mt-6">
+                <a
+                  href="https://www.linkedin.com/in/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-10 h-10 bg-slate-800 text-slate-400 rounded-lg hover:bg-blue-600 hover:text-white transition-all"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.facebook.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-10 h-10 bg-slate-800 text-slate-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
 
